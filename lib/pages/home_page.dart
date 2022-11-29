@@ -38,21 +38,52 @@ class _HomePageState extends State<HomePage> {
       child: Scaffold(
         bottomNavigationBar: Container(
           width: double.infinity,
-          child: Text("sdadasdsadsdaadsdsa"),
+          margin: EdgeInsets.only(bottom: 20, left: 25, right: 25),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(54),
+          ),
+          padding: const EdgeInsets.symmetric(vertical: 17, horizontal: 5),
+          // color: Colors.white,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: const [
+              Icon(
+                Icons.person,
+                size: 35,
+              ),
+              Icon(
+                Icons.electric_meter,
+                size: 35,
+              ),
+              Icon(
+                Icons.electrical_services_rounded,
+                size: 35,
+              ),
+              Icon(
+                Icons.electric_car,
+                size: 35,
+              ),
+              Icon(
+                Icons.energy_savings_leaf_outlined,
+                size: 35,
+              ),
+            ],
+          ),
         ),
         backgroundColor: Colors.grey[300],
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            HomeAppBar(),
-            SizedBox(
+            const HomeAppBar(),
+            const SizedBox(
               height: 20,
             ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+                children: const [
                   Text("Welcome Home"),
                   Text(
                     "MITCH KOKO",
@@ -64,24 +95,24 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 50,
             ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
-              child: Text(
+              child: const Text(
                 "Smart Decices",
                 style: TextStyle(color: Colors.grey, fontSize: 15),
               ),
             ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
-              child: Divider(),
+              child: const Divider(),
             ),
             Expanded(
               child: GridView.builder(
-                padding:
-                    EdgeInsets.only(top: 0, left: 25, right: 25, bottom: 25),
+                padding: const EdgeInsets.only(
+                    top: 0, left: 25, right: 25, bottom: 25),
                 itemBuilder: (context, i) {
                   return SmartDeviceBox(
                     deviceName: mySmartDevices[i][0],
